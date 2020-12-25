@@ -62,7 +62,7 @@ const personalMovieDB = {
     
     writeYourGenres: function  (){
 
-        for (let i=1; i<=2; i++) {
+        for (let i=1; i<2; i++) {
          //      let genre=prompt(`ваш любимый жанр под номером ${i}`);
 
          //      if(genre==null || genre===""){
@@ -72,14 +72,14 @@ const personalMovieDB = {
          //           personalMovieDB.genres[i-1]=genre;
          //      }
 
-         let genres=prompt(`Веедите данные через запятую ${i}`).toLowerCase;
+         let genres=prompt(`Введите данные через запятую`).toLowerCase();
 
          if(genres==null || genres===""){
             console.log("Вы ввели некорректные данные");
             i--;
          }else {
             personalMovieDB.genres=genres.split(", ");
-         }
+            personalMovieDB.genres.sort();         }
         
         }
         
